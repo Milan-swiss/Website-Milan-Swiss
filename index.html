@@ -1,219 +1,95 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Milan.Swiss</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #111;
-      color: #fff;
-    }
-    .glow-text {
-      text-shadow: 0 0 10px rgba(255,255,255,0.5);
-    }
-    .profile-card {
-      background-color: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      transition: all 0.3s ease;
-    }
-    .profile-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(255,255,255,0.1);
-    }
-    #spotify-card {
-      background-color: #1DB954;
-      color: #191414;
-    }
-    .content-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .reveal {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .skill-bar {
-      height: 24px;
-      border-radius: 12px;
-      overflow: hidden;
-      background-color: rgba(255,255,255,0.1);
-    }
-    .skill-progress {
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 600;
-      transition: width 1s ease-in-out;
-      font-size: 0.875rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan.Swiss</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
+
 <body class="min-h-screen flex flex-col justify-between p-6">
-<div class="content-wrapper">
-  <header class="text-center mb-10">
-    <h1 class="text-4xl font-bold glow-text mb-2">milan.swiss</h1>
-    <p class="text-gray-400">Platform Development Apprentice</p>
-  </header>
+    <div class="content-wrapper">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold glow-text mb-2">milan.swiss</h1>
+            <p class="text-gray-400">Platform Development Apprentice</p>
+        </header>
 
-  <main class="flex-grow">
-    <section id="about" class="mb-20 reveal">
-      <h2 class="text-3xl font-bold mb-8 text-primary">About Me</h2>
-      <div class="profile-card p-6">
-        <div class="flex flex-col md:flex-row items-center mb-4">
-          <img src="https://pbs.twimg.com/media/F8L_fArX0AAqxZY.jpg" alt="Milan's profile" class="rounded-full mr-4 w-24 h-24 mb-4 md:mb-0 object-cover">
-          <div>
-            <h3 class="text-2xl font-semibold glow-text">Milan</h3>
-          </div>
-        </div>
-        <p class="text-gray-300 mb-4">
-          I'm a Platform Development Apprentice focusing on managing, configuring, and optimizing IT infrastructures and systems.
-        </p>
-        <div class="flex flex-wrap">
-          <span class="bg-blue-500 text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">System Admin</span>
-          <span class="bg-green-500 text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">Network Tech</span>
-          <span class="bg-purple-500 text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">Cloud Computing</span>
-        </div>
-      </div>
-    </section>
+        <main class="flex-grow">
+            <section id="about" class="mb-20 reveal active">
+                <h2 class="text-3xl font-bold mb-8 text-primary">About Me</h2>
+                <div class="profile-card p-6">
+                    <div class="flex flex-col md:flex-row items-center mb-4">
+                        <img src="https://pbs.twimg.com/media/F8L_fArX0AAqxZY.jpg" alt="Milan's profile"
+                            class="rounded-full mr-4 w-24 h-24 mb-4 md:mb-0 object-cover">
+                        <div>
+                            <h3 class="text-2xl font-semibold glow-text">Milan</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        I'm a Platform Development Apprentice focusing on managing, configuring, and optimizing IT
+                        infrastructures and systems.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="bg-blue-500 text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">System
+                            Admin</span>
+                        <span class="bg-green-500 text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">Network
+                            Tech</span>
+                        <span
+                            class="bg-purple-500 text-xs font-semibold px-2 py-1 rounded-full mr-2 mb-2">Cloud<br>Computing</span>
+                    </div>
+                </div>
+            </section>
 
-    <section id="skills" class="mb-20 reveal">
-      <h2 class="text-3xl font-bold mb-8 text-primary">Skills & Expertise</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="profile-card p-6">
-          <h3 class="font-bold mb-4 text-xl text-primary">System Administration</h3>
-          <div class="skill-bar">
-            <div class="skill-progress bg-blue-500" style="width: 0%">30%</div>
-          </div>
-        </div>
-        <div class="profile-card p-6">
-          <h3 class="font-bold mb-4 text-xl text-primary">Network Technology</h3>
-          <div class="skill-bar">
-            <div class="skill-progress bg-green-500" style="width: 0%">50%</div>
-          </div>
-        </div>
-        <div class="profile-card p-6">
-          <h3 class="font-bold mb-4 text-xl text-primary">Cloud Computing</h3>
-          <div class="skill-bar">
-            <div class="skill-progress bg-purple-500" style="width: 0%">20%</div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <section id="skills" class="mb-20 reveal active">
+                <h2 class="text-3xl font-bold mb-8 text-primary">Skills &amp; Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="profile-card p-6">
+                        <h3 class="font-bold mb-4 text-xl text-primary">System Administration</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-blue-500" style="width: 30%;">30%</div>
+                        </div>
+                    </div>
+                    <div class="profile-card p-6">
+                        <h3 class="font-bold mb-4 text-xl text-primary">Network Technology</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-green-500" style="width: 50%;">50%</div>
+                        </div>
+                    </div>
+                    <div class="profile-card p-6">
+                        <h3 class="font-bold mb-4 text-xl text-primary">Cloud<br>Computing</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress bg-purple-500" style="width: 20%;">20%</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section id="spotify-card" class="profile-card p-6 mb-20 reveal">
-      <h3 class="text-xl font-semibold mb-2">Currently Listening To</h3>
-      <div id="spotify-info" class="flex items-center">
-        <img id="track-image" src="" alt="Album cover" class="w-16 h-16 mr-4 rounded">
-        <div>
-          <p id="track-name" class="font-semibold"></p>
-          <p id="artist-name"></p>
-        </div>
-      </div>
-    </section>
+            <section id="spotify-card" class="profile-card p-6 mb-20 reveal active">
+                <h3 class="text-xl font-semibold mb-2">Currently Listening To</h3>
+                <div id="spotify-info" class="flex items-center"><a href="/login" class="text-blue-500">Login to
+                        Spotify</a></div>
+            </section>
 
-    <section id="contact" class="mb-20 reveal">
-      <h2 class="text-3xl font-bold mb-8 text-primary">Get in Touch</h2>
-      <div class="profile-card p-6">
-        <p class="mb-6 text-xl text-secondary">I'm always eager to learn from experienced IT professionals and contribute to exciting infrastructure projects. If you have any questions or would like to share insights into the world of platform development, please don't hesitate to reach out!</p>
-        <a href="mailto:info@milan.swiss" class="bg-accent hover:bg-opacity-80 text-white font-bold py-3 px-6 rounded-full inline-block transition-all hover:shadow-lg">
-          Contact Me
-        </a>
-      </div>
-    </section>
-  </main>
+            <section id="contact" class="mb-20 reveal active">
+                <h2 class="text-3xl font-bold mb-8 text-primary">Get in Touch</h2>
+                <div class="profile-card p-6">
+                    <p class="mb-6 text-xl text-secondary">I'm always eager to learn from experienced IT professionals
+                        and contribute to exciting infrastructure projects. If you have any questions or would like to
+                        share insights into the world of platform development, please don't hesitate to reach out!</p>
+                    <a href="mailto:info@milan.swiss"
+                        class="bg-accent hover:bg-opacity-80 text-white font-bold py-3 px-6 rounded-full inline-block transition-all hover:shadow-lg">
+                        Contact Me
+                    </a>
+                </div>
+            </section>
+        </main>
 
-  <footer class="mt-10 text-center">
-    <p class="text-gray-400">&copy; 2023 milan.swiss. All rights reserved.</p>
-  </footer>
-</div>
-
-<script>
-  const SPOTIFY_ENDPOINT = 'https://milan.swiss';
-  let accessToken = new URLSearchParams(window.location.search).get('access_token');
-
-  async function getCurrentlyPlaying() {
-    if (!accessToken) {
-      document.getElementById('spotify-info').innerHTML = '<a href="/login" class="text-blue-500">Login to Spotify</a>';
-      return;
-    }
-
-    try {
-      const response = await fetch(`${SPOTIFY_ENDPOINT}/currently-playing?access_token=${accessToken}`);
-      if (response.status === 204) {
-        document.getElementById('spotify-info').innerHTML = '<p>Not currently playing anything</p>';
-        return;
-      }
-      const data = await response.json();
-
-      document.getElementById('track-image').src = data.item.album.images[0].url;
-      document.getElementById('track-name').textContent = data.item.name;
-      document.getElementById('artist-name').textContent = data.item.artists.map(artist => artist.name).join(', ');
-    } catch (error) {
-      console.error('Error fetching Spotify data:', error);
-      document.getElementById('spotify-info').innerHTML = '<p>Unable to fetch Spotify data</p>';
-    }
-  }
-
-  // Update the currently playing track every 30 seconds
-  getCurrentlyPlaying();
-  setInterval(getCurrentlyPlaying, 30000);
-
-  // Bidirectional Scroll reveal effect
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        if (entry.target.id === 'skills') {
-          animateSkillBars();
-        }
-      } else {
-        entry.target.classList.remove('active');
-        if (entry.target.id === 'skills') {
-          resetSkillBars();
-        }
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal').forEach(element => {
-    observer.observe(element);
-  });
-
-  function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    skillBars.forEach(bar => {
-      const width = bar.textContent;
-      bar.style.width = '0%';
-      setTimeout(() => {
-        bar.style.width = width;
-      }, 100);
-    });
-  }
-
-  function resetSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    skillBars.forEach(bar => {
-      bar.style.width = '0%';
-    });
-  }
-</script>
+        <footer class="mt-10 text-center">
+            <p class="text-gray-400">© 2023 milan.swiss. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
